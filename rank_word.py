@@ -42,6 +42,7 @@ def print_topic():
             dic = {}
             word_rate = 0
             tp_id = tP_batch_new[m][1]
+            #ladmodel.py源代码568行自己改了id2word[id],topic[id]输出顺序
             word_list = batch_lda.show_topic(tp_id,500000)
             dic = dict(word_list)  #将showtopic的[(a,b),(),()]形式转换成字典
             for w in list(set(content_list)):
